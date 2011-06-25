@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from main.models import HouseholdIncome
 from main.models import HoodAttributes
 from main.models import Tweets
+from metrics import *
 import json
 import random
 
@@ -23,7 +24,7 @@ def tweets(request):
   # First, get all user neighborhood attributes
   neighborhood = json.loads(HoodAttributes.objects.get(id=user_id).attributes)
   print 'Atts: %s' % neighborhood
-  
+
   # Next, get all relevant tweets for those decisions
   dimensions = ['environment', 'government', 'infrastructure', 'safety', 'k-12',
                 'higher ed']
@@ -48,5 +49,14 @@ def incomes(request):
 	t = loader.get_template('main/incomes.html')
 	c = Context({
 		'household_incomes': household_incomes,
+	})
+	return HttpResponse(t.render(c))
+
+def metrics(request):
+	totalDict = dict( healthMetrics(int(request.GET['health'])).items() + foodMetrics(int(request.GET['food'])).items() + infraMetrics(int(request.GET['infra'])).items() + envMetrics(int(request.GET['env'])).items() + safetyMetrics(int(request.GET['safety'])).items() + govMetrics(int(request.GET['gov'])).items() + higherEduMetrics(int(request.GET['edu'])).items() + k12EduMetrics(int(request.GET['k12'])).items() )
+	
+	t = loader.get_template('main/metrics.html')
+	c = Context({
+		'totalDict' : json.dumps(totalDict),
 	})
 	return HttpResponse(t.render(c))
