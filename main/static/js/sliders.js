@@ -5,7 +5,7 @@ $(document).ready(function(){
 		formRow = slider.parent(".formRow");
 		try{
 			$("input",formRow).val(ui.value);
-			$(".precent",formRow).html("$"+$().number_format(ui.value,{numberOfDecimals:0,thousandSeparator: ','}));
+			$(".precent",formRow).html(formatNumber(ui.value));
 		}catch(e){}
 		$("#taxes").trigger("update");
 	});
@@ -15,38 +15,32 @@ $(document).ready(function(){
 	$("form#taxes").submit(function(event){
 		event.preventDefault();
 		
+		
+		// get via json
+		data = {"artsAndMusicAvailable": false, "healthFat": 5, "treesCount": 3, "businessLevel": 2, "fireworksAvailable": false, "awesomeGradRatesAvailable": false, "policeAvailable": true, "healthSmoker": 5, "foodStandsCount": 4, "sportsTeamAvailbale": true, "roadType": 4, "foodStandsAvailable": true, "parkAvailable": true, "treesAvailable": true, "bushesAvailable": true, "marketAvailable": true, "multiplier": 4, "schoolAvailable": true, "gangCount": 0, "peopleCount": 0, "libraryAvailable": true, "scienceFairAvailable": false, "healthGood": 5, "marketWithProduce": true}
 		settings = {};
 		
-		infrastructure = $("input[name=infrastructure]").val();
-		if(infrastructure > 15){
-			settings['infrastructure'] = 'bus';
-		}else if(infrastructure > 10){
-			settings['infrastructure'] = 'road';
-		}else if(infrastructure > 3){
-			settings['infrastructure'] = 'cobblestone';
-		}else{
-			settings['infrastructure'] = 'bad';
-		}
-		
+
+
 		
 		$(".block").trigger({
 			type:"load",
-			block:settings,
+			block:data,
 		})
 		
 	}).bind("load",function(event){
 		event.stopPropagation();
 		
 		total_budget = 0;
-		total_budget += $("#income input[name=25k]").val()*3500000;
-		total_budget += $("#income input[name=60k]").val()*3700000;
-		total_budget += $("#income input[name=100k]").val()*2500000;
-		total_budget += $("#income input[name=200k]").val()*750000;
+		total_budget += parseInt($("#income input[name=25k]").val())*3500000;
+		total_budget += parseInt($("#income input[name=60k]").val())*3700000;
+		total_budget += parseInt($("#income input[name=100k]").val())*2500000;
+		total_budget += parseInt($("#income input[name=200k]").val())*750000;
 		
 		$(this).data("total_budget",total_budget);
 		
 		$("form#taxes .slider").slider({
-			max:total_budget,
+			max:(total_budget/2),
 			min:0
 			}).parents(".formRow").append('<span class="precent"></span>');
 		
@@ -65,7 +59,11 @@ $(document).ready(function(){
 			total_spent += parseInt($(inputs[i]).val())
 		}
 		
-		$(".total",$(this)).html("$"+$().number_format(total_budget,{numberOfDecimals:0,thousandSeparator: ','}));
-		$(".left",$(this)).html("$"+$().number_format(total_budget - total_spent,{numberOfDecimals:0,thousandSeparator: ','}));
+		$(".total",$(this)).html(formatNumber(total_budget));
+		$(".left",$(this)).html(formatNumber(total_budget - total_spent));
 	});
 });
+
+function formatNumber(num){
+	return "$"+$().number_format(num/1000000000,{numberOfDecimals:2,thousandSeparator: ','})+" billion";
+}

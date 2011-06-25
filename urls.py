@@ -13,6 +13,11 @@ urlpatterns = patterns('',
 	(r'^main/incomes$', 'main.views.incomes'),
 	(r'^main/yaytaxesland$', 'main.views.yaytaxesland'),	
 	
+	# urlpatterns += patterns('',
+	#     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+	#         {'document_root': settings.MEDIA_ROOT}),
+	# )	
+	
     # Example:
     # (r'^yaytaxes/', include('yaytaxes.foo.urls')),
 

@@ -7,6 +7,7 @@ $(document).ready(function(){
 		$(".page:first").show();
 	}).bind("next",function(event){
 		if($(".page:visible",$(this)).length>0){
+			
 			if($(".page:visible",$(this))[0]==$(".page:last",$(this))[0]){
 				
 				// show blocks and sliders
@@ -19,6 +20,9 @@ $(document).ready(function(){
 			}
 			$(".page:visible",$(this)).hide().next(".page").show();
 		}
+	}).submit(function(event){
+		event.preventDefault();
+		$(this).trigger("next");
 	});
 	
 	$("form#income .page .next").click(function(event){

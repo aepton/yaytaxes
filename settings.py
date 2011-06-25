@@ -53,7 +53,7 @@ MEDIA_ROOT = '/Users/jesse/Documents/github/yaytaxes/main/static/'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://127.0.0.1:8000/static/'
+MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -67,7 +67,7 @@ SECRET_KEY = 'zp^4sfr&!&(e+a&(zr8dr5xln%h%4y(5=$%yiv78=-biro%x*)'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+	'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (

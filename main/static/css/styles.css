@@ -6,15 +6,26 @@ body{
 	padding:0px;
 }
 
-.button{
+a,a:visited{
+	color:#00F;
+}
+
+.button,a.button{
 	display:block;
-	background:#eee;
-	-moz-box-radius:4px;
+	background:#ffe71f;
+	text-align:center;
+	width:170px;
+	color:#000;
+	font-weight:bold;
+	margin:5px auto;
+	padding:5px 7px;
+	text-decoration:none;
+	-moz-border-radius:4px;
+	border:0px;
 }
 
 .wrapper{
 	position:relative;
-	width:960px;
 	margin:0px auto;
 }
 
@@ -24,6 +35,7 @@ body{
 	width:100%;
 	height:464px;
 	background:transparent url("../i/grass.jpg") repeat-x bottom left;
+	overflow:hidden;
 }
 
 .road{
@@ -84,12 +96,12 @@ body{
 
 .sidewalk .trash{
 	display:block;
-	float:left;
-	width:384px;
+	width:52px;
 	height:93px;
 	background:transparent url("../i/trash.png") no-repeat 0px 0px;
-	position:relative;
+	position:absolute;
 	top:12px;
+	left:0px;
 }
 
 .buildings{
@@ -98,8 +110,9 @@ body{
 	left:0px;
 	z-index:1;
 	height:400px;
-	width:100%;
+	width:auto;
 	overflow:hidden;
+	margin:0px auto;
 }
 .building{
 	display:block;
@@ -117,9 +130,27 @@ body{
 	background-image:url('../i/building-worse.jpg');
 }
 
+.building.onfire{
+	width:190px;
+	background-image:url('../i/building-on-fire.jpg');
+}
+
 .building.mcdonalds{
 	width:192px;
 	background-image:url('../i/building-mcdonalds.png');
+}
+
+.building.market{
+	width:336px;
+	background-image:url('../i/market.png');
+}
+.building.market-w-veggie{
+	width:336px;
+	background-image:url('../i/market-w-veggies.png');
+}
+.building.school{
+	width:142px;
+	background:url("../i/cabin.jpg") transparent no-repeat bottom left;	
 }
 
 
@@ -132,7 +163,29 @@ body{
 	background:transparent url("../i/bus.png") no-repeat top left;
 }
 
-#income .page{
+.sidewalk .metro{
+	position:absolute;
+	top:0px;
+	left:84px;
+	width:96px;
+	height:64px;
+	background:transparent url("../i/subway.png") no-repeat top left;
+}
+.sidewalk .firehydrent{
+	position:absolute;
+	top:0px;
+	left:620px;
+	width:27px;
+	height:46px;
+	background:transparent url("../i/fire-hydrent.png") no-repeat top left;
+}
+
+#income{
+	width:300px;
+	margin:20px auto 0px;
+}
+
+#income .page,#income .note{
 	width:300px;
 	display:block;
 	margin:0px auto;
@@ -141,8 +194,40 @@ body{
 	padding:10px;
 }
 
+#income .note{
+	font-size:1em;
+	padding:15px;
+}
+
 #income .page input{
 	display:block;
 	width:270px;
 	margin:7px auto;
+}
+
+
+.block .tweet{
+width:250px;
+background:transparent url(../i/white75.png);
+padding:5px 5px 10px 10px;
+border:#00F 1px solid;
+position:absolute;
+top:0px;
+left:0px;
+z-index:30;
+-moz-border-radius:7px;
+}
+.block .tweet .from{
+display:block;
+font-size:0.8em;
+font-weight:bold;
+}
+.block .tweet .bear{
+	display:block;
+	position:absolute;
+	bottom:-10px;
+	left:-10px;
+	width:35px;
+	height:20px;
+	background:transparent url('../i/goldenbear.png') no-repeat top left;
 }
