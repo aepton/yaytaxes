@@ -23,6 +23,11 @@ def healthMetrics(healthInput):
 
 def foodMetrics(foodInput):
 	
+	foodStandsAvailable = False
+	marketAvailable = False
+	marketWithProduce = False 
+	foodStandsCount = 0
+	
 	if foodInput < 1:
 		foodStandsCount = 0
 		foodStandsAvailable = False
@@ -61,6 +66,11 @@ def infraMetrics(infraInput):
 	return {'roadType' : roadType}
 
 def envMetrics(envInput):
+	
+	bushesAvailable = False
+	treesCount = 0
+	treesAvailable = False
+	parkAvailable = False
 	
 	if envInput < 1:
 		bushesAvailable = True
@@ -135,7 +145,11 @@ def higherEduMetrics(higherEduInput):
 def k12EduMetrics(k12EdInput):
 	
 	if k12EdInput < 20:
-		pass
+		schoolAvailable = False
+		sportsTeamAvailbale = False
+		scienceFairAvailable = False
+		artsAndMusicAvailable = False
+		awesomeGradRatesAvailable = False
 	elif k12EdInput >=20 and k12EdInput < 40:
 		schoolAvailable = True
 		sportsTeamAvailbale = False
