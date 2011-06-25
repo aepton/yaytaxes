@@ -1,1 +1,20 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+	<script type="text/javascript">                                         
+		function tweet() {
+			$('#tweets').append('<p>Tweet!</p>');
+	  }
+	
+		$(document).ready(function() {
+		  setInterval("tweet()", 5 * 1000); // Every 5 seconds
+		 });
+	</script>
+</head>
+<body>
 <p>Hello YAY+TAXES!!!!</p>
+<div id="tweets">
+</div>
+</body>
+</html>
