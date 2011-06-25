@@ -1,0 +1,5 @@
+mysite.fcgi
+deploy.sh
+exclude.txt
+/server
+.gitignore
