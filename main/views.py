@@ -19,3 +19,5 @@ def incomes(request):
 		'household_incomes': household_incomes,
 	})
 	return HttpResponse(t.render(c))
+
+

@@ -5,6 +5,10 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+# ROOT_PATH = os.path.dirname(__file__)
+# MEDIA_ROOT = os.path.join(ROOT_PATH, 'static')
+# MEDIA_URL = 'http://127.0.0.1:8000/static/'
+
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
