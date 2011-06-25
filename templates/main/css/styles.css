@@ -1,0 +1,148 @@
+body{
+	font-family:serif;
+	font-size:1em;
+	background:#85bdee;
+	margin:0px;
+	padding:0px;
+}
+
+.button{
+	display:block;
+	background:#eee;
+	-moz-box-radius:4px;
+}
+
+.wrapper{
+	position:relative;
+	width:960px;
+	margin:0px auto;
+}
+
+.block{
+	position:relative;
+	margin:0px auto;
+	width:100%;
+	height:464px;
+	background:transparent url("../i/grass.jpg") repeat-x bottom left;
+}
+
+.road{
+	position:absolute;
+	top:404px;
+	left:0px;
+	z-index:3;
+	display:both;
+	height:60px;
+	width:100%;
+	background:transparent repeat-x bottom left;
+}
+.road.asfault{
+	background-image:url("../i/road.jpg");
+}
+.road.cobblestone{
+	background-image:url("../i/cobble-stone.jpg");
+}
+
+.sidewalk{
+	position:absolute;
+	top:340px;
+	left:0px;
+	z-index:2;
+	display:block;
+	height:64px;
+	width:100%;
+	background:transparent url("../i/grass.jpg") repeat-x top left;
+}
+.sidewalk.concrete{
+	background-image:url("../i/sidewalk.jpg");
+}
+.sidewalk.concrete.bad{
+	background-image:url("../i/sidewalk-bad.jpg");
+}
+.sidewalk.cobblestone{
+	background:transparent url("../i/cobble-stone.jpg") repeat-x top left;
+}
+
+.sidewalk .tree{
+	display:block;
+	float:left;
+	width:192px;
+	height:93px;
+	background:transparent url("../i/tree.png") no-repeat 0px 0px;
+	position:relative;
+	top:-42px;
+}
+.sidewalk .shrub{
+	display:block;
+	float:left;
+	width:192px;
+	height:93px;
+	background:transparent url("../i/shrub.jpg") no-repeat 0px 0px;
+	position:relative;
+	top:12px;
+}
+
+.sidewalk .trash{
+	display:block;
+	float:left;
+	width:384px;
+	height:93px;
+	background:transparent url("../i/trash.png") no-repeat 0px 0px;
+	position:relative;
+	top:12px;
+}
+
+.buildings{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+	height:400px;
+	width:100%;
+	overflow:hidden;
+}
+.building{
+	display:block;
+	float:left;
+	width:189px;
+	height:342px;
+	background:transparent url("../i/building.jpg") no-repeat top left;
+}
+.building.bad{
+	width:159px;
+	background-image:url('../i/building-bad.jpg');
+}
+.building.worse{
+	width:190px;
+	background-image:url('../i/building-worse.jpg');
+}
+
+.building.mcdonalds{
+	width:192px;
+	background-image:url('../i/building-mcdonalds.png');
+}
+
+
+.road .bus{
+	position:absolute;
+	top:-90px;
+	left:0px;
+	width:218px;
+	height:113px;
+	background:transparent url("../i/bus.png") no-repeat top left;
+}
+
+#income .page{
+	width:300px;
+	display:block;
+	margin:0px auto;
+	background:transparent url('../i/white75.png');
+	font-size:1.2em;
+	padding:10px;
+}
+
+#income .page input{
+	display:block;
+	width:270px;
+	margin:7px auto;
+}

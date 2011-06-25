@@ -8,6 +8,8 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('',
 	(r'^main$', 'main.views.index'),
 	(r'^main/$', 'main.views.index'),
+	(r'^main/incomes$', 'main.views.incomes'),
+	(r'^main/yaytaxesland$', 'main.views.yaytaxesland'),
 	
     # Example:
     # (r'^yaytaxes/', include('yaytaxes.foo.urls')),

@@ -1,0 +1,10 @@
+<h3> check out these incomes!!! </h3>
+{% if household_incomes %}
+    <ul>
+    {% for data in household_incomes %}
+        <li><a href="/incomes/{{ data.id }}/">Income {{ data.income }}, Households{{ data.households }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No incomes are available.</p>
+{% endif %}

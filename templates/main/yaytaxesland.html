@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Taxes YAY!</title>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<link href="/templates/main/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/form_styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.number_format.js"></script>
+	<script type="text/javascript" src="js/jquery.random.js"></script>
+	<script type="text/javascript" src="js/sliders.js"></script>
+	<script type="text/javascript" src="js/block.js"></script>
+	<script type="text/javascript" src="js/income.js"></script>
+	<script type="text/javascript" src="js/page.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div id="display">
+	<div class="block">
+	
+	</div>
+	</div>
+	<form id="income" action="" method="post">
+		
+		<div class="page">
+			<label>If someone makes $25k a year, how much should they be taxes?</label>
+			<input type="text" name="25k" value="" />
+			<a href="#" class="next button">Next</a>
+		</div>
+		<div class="page">
+			<label>If someone makes $60k a year, how much should they be taxes?</label>
+			<input type="text" name="60k" value="" />
+			<a href="#" class="next button">Next</a>
+		</div>
+		<div class="page">
+			<label>If someone makes $100k a year, how much should they be taxes?</label>
+			<input type="text" name="100k" value="" />
+			<a href="#" class="next button">Next</a>
+		</div>
+		<div class="page">
+			<label>If someone makes $200k a year, how much should they be taxes?</label>
+			<input type="text" name="200k" value="" />
+			<a href="#" class="next button">Next</a>
+		</div>
+	</form>
+
+	<form id="taxes" action="" method="post">
+		<p>You have a total operating budget of <span class="total">$0</span> dollars.</p>
+		<p>You have <span class="left">$0</span> dollars to allocate.</p>
+		<div class="formRow">
+			<label>Public Saftey</label>
+			<div class="slider"></div>
+			<input type="text" name="public_saftey" value="" />
+		</div>
+		<div class="formRow">
+			<label>Health and Human Services</label>
+			<div class="slider"></div>
+			<input type="text" name="health" value="" />
+		</div>
+		<div class="formRow">
+			<label>Food and Agriculture</label>
+			<div class="slider"></div>
+			<input type="text" name="food" value="" />
+		</div>
+		<div class="formRow">
+			<label>Government and Administration</label>
+			<div class="slider"></div>
+			<input type="text" name="government" value="" />
+		</div>
+		<div class="formRow">
+			<label>Infrastructure</label>
+			<div class="slider"></div>
+			<input type="text" name="infrastructure" value="" />
+		</div>
+		<div class="formRow">
+			<label>Environment</label>
+			<div class="slider"></div>
+			<input type="text" name="environment" value="" />
+		</div>
+		<div class="formRow">
+			<label>K-12 Education</label>
+			<div class="slider"></div>
+			<input type="text" name="k-12" value="" />
+		</div>
+		<div class="formRow">
+			<label>Higher Education</label>
+			<div class="slider"></div>
+			<input type="text" name="higher-education" value="" />
+		</div>
+		<br style="clear:both" />
+		<input type="submit" value="Create" class="button" />
+	</form>
+</div>
+</body>
+</html>
