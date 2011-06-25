@@ -1,0 +1,6 @@
+
+install django:
+https://my.bluehost.com/cgi/help/000531?step=000531
+
+South db migrator for django:
+http://south.aeracode.org/docs/tutorial/part1.html
