@@ -8,6 +8,7 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('',
 	(r'^main$', 'main.views.index'),
 	(r'^main/$', 'main.views.index'),
+	(r'^main/tweets$', 'main.views.tweets'),
 	(r'^main/incomes$', 'main.views.incomes'),
 	(r'^main/yaytaxesland$', 'main.views.yaytaxesland'),	
 	
