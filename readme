@@ -4,3 +4,8 @@ https://my.bluehost.com/cgi/help/000531?step=000531
 
 South db migrator for django:
 http://south.aeracode.org/docs/tutorial/part1.html
+
+
+Deploy checks
+settings file copied from settings.py
+p ytdb ../ytdb (copy ytdb up from app directory to root)
