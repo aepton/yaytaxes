@@ -4,8 +4,11 @@ from django.conf.urls.defaults import *
 # from django.contrib import admin
 # admin.autodiscover()
 
+#(r'', 'main.views.index'),
 urlpatterns = patterns('',
-	(r'^yaytaxes/$', 'main.views.index'),
+	(r'^main$', 'main.views.index'),
+	(r'^main/$', 'main.views.index'),
+	
     # Example:
     # (r'^yaytaxes/', include('yaytaxes.foo.urls')),
 
